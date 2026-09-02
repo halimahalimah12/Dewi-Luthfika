@@ -634,12 +634,15 @@ footer {
     justify-content: space-between;
     width: 100%;
     max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
   }
   .container {
     width: 100%;
     max-width: 100%;
     padding-left: 18px;
     padding-right: 18px;
+    box-sizing: border-box;
   }
   .menu-btn {
     display: block;
@@ -651,7 +654,7 @@ footer {
     right: 0;
     top: 76px;
     background: #fff;
-    padding: 10px 24px;
+    padding: 10px 18px;
     flex-direction: column;
     gap: 0;
     border-bottom: 1px solid #eee;
@@ -675,6 +678,7 @@ footer {
   }
   .hero-image .photo-placeholder {
     height: 330px;
+    width: 100%;
   }
   .quick {
     grid-template-columns: 1fr 1fr;
@@ -706,6 +710,13 @@ footer {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .registration-steps {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .registration-step {
+    padding: 20px;
+  }
   .mobile-cta {
     display: block;
     position: fixed;
@@ -724,8 +735,8 @@ footer {
 }
 @media (max-width: 520px) {
   .container {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   .cards,
   .features,
@@ -735,11 +746,20 @@ footer {
   .quick {
     grid-template-columns: 1fr 1fr;
   }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
   .registration-steps {
     grid-template-columns: 1fr;
   }
-  .gallery {
-    grid-template-columns: 1fr 1fr;
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .mobile-cta {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
   }
   .gallery .photo-placeholder {
     min-height: 170px;
