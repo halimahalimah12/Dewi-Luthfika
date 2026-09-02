@@ -13,14 +13,23 @@
   box-sizing: border-box;
 }
 html {
+  width: 100%;
+  max-width: 100%;
   scroll-behavior: smooth;
 }
 body {
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   font-family: Inter, sans-serif;
   color: var(--text);
   background: #fff;
   line-height: 1.65;
+  overflow-x: hidden;
+}
+main {
+  width: 100%;
+  max-width: 100%;
 }
 .toast {
   position: fixed;
@@ -57,10 +66,12 @@ a {
   color: inherit;
 }
 .container {
+  width: 100%;
   max-width: 1240px;
-  margin: auto;
+  margin: 0 auto;
   padding-left: 24px;
   padding-right: 24px;
+  box-sizing: border-box;
 }
 .nav {
   height: 76px;
@@ -617,6 +628,14 @@ footer {
 @media (max-width: 780px) {
   .nav {
     justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+  }
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
   }
   .menu-btn {
     display: block;
@@ -711,9 +730,9 @@ footer {
   }
   .quick {
     grid-template-columns: 1fr 1fr;
-    .registration-steps {
-      grid-template-columns: 1fr;
-    }
+  }
+  .registration-steps {
+    grid-template-columns: 1fr;
   }
   .gallery {
     grid-template-columns: 1fr 1fr;
