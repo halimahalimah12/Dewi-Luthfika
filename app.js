@@ -700,7 +700,7 @@ document.querySelector("#downloadPdf")?.addEventListener("click", async () => {
     y += 8;
     doc.text("Mengetahui,", W - 80, y);
     y += 35;
-    doc.text("(Orang Tua / Wali)", W - 80, y, { align: "center" });
+    doc.text("(Orang Tua / Wali)", W - 55, y, { align: "center" });
 
     const photoInput = document.querySelector('input[name="fotoFile"]');
     const photoFile = photoInput?.files?.[0];
@@ -740,7 +740,7 @@ document.querySelector("#downloadPdf")?.addEventListener("click", async () => {
       });
     }
 
-    doc.save(`Formulir-Pendaftaran-${registrationData.number}.pdf`);
+    doc.save(`Formulir-Pendaftaran-${registrationData.name}.pdf`);
   } catch (err) {
     alert("Berkas PDF belum berhasil dibuat. Silakan coba lagi.");
     console.error(err);
